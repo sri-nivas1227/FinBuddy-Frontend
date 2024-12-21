@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     axios
-      .post(`/api/auth/login`, {
+      .post(`${import.meta.env.VITE_API_URL}/auth/login`, {
         email,
         password,
       })

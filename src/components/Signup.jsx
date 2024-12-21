@@ -30,7 +30,7 @@ const Signup = () => {
       return;
     }
     axios
-      .post("/api/auth/register", formData)
+      .post(`${import.meta.env.VITE_API_URL}/auth/register`, formData)
       .then((res) => {
         if (res.data.success) {
           console.log(res);

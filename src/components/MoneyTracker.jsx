@@ -10,7 +10,7 @@ function MoneyTracker() {
   const [incomes, setIncomes] = useState([]);
   const fetchTransactions = async () => {
     await axios
-      .get(`/api/ledger`, {
+      .get(`${import.meta.env.VITE_API_URL}/ledger`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

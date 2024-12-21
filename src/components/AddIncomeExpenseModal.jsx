@@ -47,7 +47,7 @@ function AddIncomeExpenseModal({ type, showModal, setShowModal }) {
     // calling the api to add the transaction
     axios
       .post(
-        `/api/ledger/addTransaction`,
+        `${import.meta.env.VITE_API_URL}/ledger/addTransaction`,
         {
           amount,
           category,
